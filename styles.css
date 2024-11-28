@@ -1,0 +1,174 @@
+/* 基本設定 */
+@charset "UTF-8";
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 24px;
+  color: #4CAF50;
+}
+
+/* カルキュレーターのコンテナ */
+.calculator {
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto; /* ページ中央に配置 */
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* スロットのコンテナ */
+.slots {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* 中央揃え */
+  gap: 20px; /* スロット間の隙間 */
+}
+
+.slot {
+  width: calc(50% - 10px); /* 2カラムの設定で間隔を調整 */
+  margin-bottom: 20px;
+  background-color: #fafafa;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.slot input[type="text"] {
+  width: 100%;
+  padding: 8px 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.slot input[type="number"],
+.slot input[type="range"],
+.slot select {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.slot button {
+  background-color: #e57373;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.slot button:hover {
+  background-color: #d32f2f;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* 結果セクション */
+#results {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #e9f7ef;
+  border-radius: 8px;
+}
+
+#results label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* グラフ */
+canvas {
+  margin-top: 20px;
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* フッター */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 14px;
+}
+
+footer a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* レベルとスキルレベルのインプットとレンジバー */
+.slot label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* レベル・スキルレベルのインプットとバーを横並びに */
+.input-group {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* インプットとレンジバーの間隔 */
+}
+
+.input-group input[type="number"],
+.input-group input[type="range"] {
+  width: 50px; /* インプットフィールドを小さくする */
+}
+
+.input-group input[type="range"] {
+  flex: 1; /* レンジバーが残りのスペースを取る */
+  width: 100%; /* 横幅を100%にすることで可変サイズに */
+  max-width: 200px; /* 最大幅を制限 */
+}
+
+/* レベルやスキルレベルのラベルとインプットのスタイル */
+.label-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+label {
+  font-size: 14px;
+  margin: 0;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+  .slots {
+    flex-direction: column;
+    justify-content: center; /* モバイルで中央揃え */
+  }
+
+  .slot {
+    width: 100%; /* モバイル時は1カラムに */
+  }
+
+  canvas {
+    max-width: 100%;
+  }
+}
