@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ポケモンスリープエナジー計算</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="calculator">
+  <h1>ポケモンスリープ エナジー計算</h1>
+
+  <div class="slots">
+    <!-- 5ポケモンスロット -->
+    <div class="slot" id="slot1">
+      <input type="text" placeholder="ポケモン名を入力" oninput="showSuggestions(1)" onchange="fetchPokemonData(1)" list="pokemon-list"style="padding-right: 30px;">
+      <button type="button" onclick="clearInput(1)" >✕</button>
+      <datalist id="pokemon-list">
+        <!-- ポケモンリスト -->
+        <option value="フシギダネ"></option>
+          <option value="フシギソウ"></option>
+          <option value="フシギバナ"></option>
+          <option value="ヒトカゲ"></option>
+          <option value="リザード"></option>
+          <option value="リザードン"></option>
+          <option value="ゼニガメ"></option>
+          <option value="カメール"></option>
+          <option value="カメックス"></option>
+          <option value="キャタピー"></option>
+          <option value="トランセル"></option>
+          <option value="バタフリー"></option>
+          <option value="コラッタ"></option>
+          <option value="ラッタ"></option>
+          <option value="アーボ"></option>
+          <option value="アーボック"></option>
+          <option value="ピカチュウ"></option>
+          <option value="ピカチュウ ハロウィン"></option>
+          <option value="ピカチュウ サンタ"></option>
+          <option value="ライチュウ"></option>
+          <option value="ピッピ"></option>
+          <option value="ピクシー"></option>
+          <option value="ロコン"></option>
+          <option value="キュウコン"></option>
+          <option value="プリン"></option>
+          <option value="プクリン"></option>
+          <option value="ディグダ"></option>
+          <option value="ダグトリオ"></option>
+          <option value="ニャース"></option>
+          <option value="ペルシアン"></option>
+          <option value="コダック"></option>
+          <option value="ゴルダック"></option>
+          <option value="マンキー"></option>
+          <option value="オコリザル"></option>
+          <option value="ガーディ"></option>
+          <option value="ウインディ"></option>
+          <option value="マダツボミ"></option>
+          <option value="ウツドン"></option>
+          <option value="ウツボット"></option>
+          <option value="イシツブテ"></option>
+          <option value="ゴローン"></option>
+          <option value="ゴローニャ"></option>
+          <option value="ヤドン"></option>
+          <option value="ヤドラン"></option>
+          <option value="コイル"></option>
+          <option value="レアコイル"></option>
+          <option value="ドードー"></option>
+          <option value="ドードリオ"></option>
+          <option value="ゴース"></option>
+          <option value="ゴースト"></option>
+          <option value="ゲンガー"></option>
+          <option value="イワーク"></option>
+          <option value="カラカラ"></option>
+          <option value="ガラガラ"></option>
+          <option value="ガルーラ"></option>
+          <option value="バリヤード"></option>
+          <option value="カイロス"></option>
+          <option value="メタモン"></option>
+          <option value="イーブイ"></option>
+          <option value="シャワーズ"></option>
+          <option value="サンダース"></option>
+          <option value="ブースター"></option>
+          <option value="ミニリュウ"></option>
+          <option value="ハクリュー"></option>
+          <option value="カイリュー"></option>
+          <option value="チコリータ"></option>
+          <option value="ベイリーフ"></option>
+          <option value="メガニウム"></option>
+          <option value="ヒノアラシ"></option>
+          <option value="マグマラシ"></option>
+          <option value="バクフーン"></option>
+          <option value="ワニノコ"></option>
+          <option value="アリゲイツ"></option>
+          <option value="オーダイル"></option>
+          <option value="ピチュー"></option>
+          <option value="ピィ"></option>
+          <option value="ププリン"></option>
+          <option value="トゲピー"></option>
+          <option value="トゲチック"></option>
+          <option value="メリープ"></option>
+          <option value="モココ"></option>
+          <option value="デンリュウ"></option>
+          <option value="ウソッキー"></option>
+          <option value="ウパー"></option>
+          <option value="ヌオー"></option>
+          <option value="エーフィ"></option>
+          <option value="ブラッキー"></option>
+          <option value="ヤドキング"></option>
+          <option value="ソーナンス"></option>
+          <option value="ハガネール"></option>
+          <option value="ヘラクロス"></option>
+          <option value="デリバード"></option>
+          <option value="デルビル"></option>
+          <option value="ヘルガー"></option>
+          <option value="ライコウ"></option>
+          <option value="エンテイ"></option>
+          <option value="スイクン"></option>
+          <option value="ヨーギラス"></option>
+          <option value="サナギラス"></option>
+          <option value="バンギラス"></option>
+          <option value="ラルトス"></option>
+          <option value="キルリア"></option>
+          <option value="サーナイト"></option>
+          <option value="ナマケロ"></option>
+          <option value="ヤルキモノ"></option>
+          <option value="ケッキング"></option>
+          <option value="ヤミラミ"></option>
+          <option value="ココドラ"></option>
+          <option value="コドラ"></option>
+          <option value="ボスゴドラ"></option>
+          <option value="ゴクリン"></option>
+          <option value="マルノーム"></option>
+          <option value="チルット"></option>
+          <option value="チルタリス"></option>
+          <option value="カゲボウズ"></option>
+          <option value="ジュペッタ"></option>
+          <option value="アブソル"></option>
+          <option value="ソーナノ"></option>
+          <option value="タマザラシ"></option>
+          <option value="トドグラー"></option>
+          <option value="トドゼルガ"></option>
+          <option value="コリンク"></option>
+          <option value="ルクシオ"></option>
+          <option value="レントラー"></option>
+          <option value="フワンテ"></option>
+          <option value="フワライド"></option>
+          <option value="ウソハチ"></option>
+          <option value="マネネ"></option>
+          <option value="リオル"></option>
+          <option value="ルカリオ"></option>
+          <option value="グレッグル"></option>
+          <option value="ドクロッグ"></option>
+          <option value="ユキカブリ"></option>
+          <option value="ユキノオー"></option>
+          <option value="ジバコイル"></option>
+          <option value="トゲキッス"></option>
+          <option value="リーフィア"></option>
+          <option value="グレイシア"></option>
+          <option value="エルレイド"></option>
+          <option value="ニンフィア"></option>
+          <option value="デデンネ"></option>
+          <option value="アゴジムシ"></option>
+          <option value="デンヂムシ"></option>
+          <option value="クワガノン"></option>
+          <option value="ヌイコグマ"></option>
+          <option value="キテルグマ"></option>
+          <option value="キュワワー"></option>
+          <option value="ミミッキュ"></option>
+          <option value="ウッウ"></option>
+          <option value="ニャオハ"></option>
+          <option value="ニャローテ"></option>
+          <option value="マスカーニャ"></option>
+          <option value="ホゲータ"></option>
+          <option value="アチゲータ"></option>
+          <option value="ラウドボーン"></option>
+          <option value="クワッス"></option>
+          <option value="ウェルカモ"></option>
+          <option value="ウェーニバル"></option>
+        <!-- 他のポケモンリストも追加 -->
+      </datalist>
+      <div id="info1" class="info">
+        <img id="img1" src="" alt="ポケモン画像" class="pokemon-image">
+        <div class="data"></div>
+        <label id="berrysLabel1">きのみ数: -</label>
+        <label id="berryLabel1">きのみ: </label>
+        <label id="berryEnergyLabel1">獲得エナジー: </label>
+        <label>レベル: 
+          <span id="levelValue1">1</span>
+          <input type="number" id="levelInput1" min="1" max="100" value="1" oninput="updateLevelFromInput(1, this.value)">
+          <input type="range" id="levelRange1" min="1" max="100" value="1" oninput="updateLevel(1, this.value)">
+          <label id="helpSpeedLabel1">お手伝いスピード: 0</label>
+        </label>
+       
+        <label>スキルレベル: 
+          <span id="skillLevelValue1">1</span> <!-- 動的に変化する部分 -->
+          <input type="number" id="skillLevelInput1" min="1" max="7" value="1" 
+                 oninput="updateSkillLevel(1, this.value)">
+          <input type="range" id="skillLevelRange1" min="1" max="7" value="1" 
+                 oninput="updateSkillLevel(1, this.value)">
+          <label id="skillLabel1">メインスキル: 0</label>
+          <label id="skillProbabilityLabel1">スキル確率確率: 0</label>
+        </label>
+        </label><!-- 食材選択 -->
+        <label id="ingredientRatioLabel1">食材確率: 0</label>
+        <label>食材選択:</label>
+        <select id="ingredientSelect1">
+        </select>
+        <label id="ingredients1">食材: </label>
+        
+        <label>サブスキル選択:</label>
+        <select id="subskillSelect1" > </select>
+        <select id="subskillSelect2" > </select>
+        <select id="subskillSelect3" > </select>
+        <select id="subskillSelect4" > </select>
+        <select id="subskillSelect5" > </select>
+        <!-- 性格の選択 -->
+        <select id="NatureSelect" > </select>
+        <!-- 最大所持数の表示 -->
+        <label id="possessionsLabel1">最大所持数: 0</label>
+        <!-- 計算 -->
+        <label>おてつだいボーナス: 
+          <select id="bonusSelct1" >
+            <option value="おてつだいボーナスX0">おてつだいボーナスX0</option>
+            <option value="おてつだいボーナスX1">おてつだいボーナスX1</option>
+            <option value="おてつだいボーナスX2">おてつだいボーナスX2</option>
+            <option value="おてつだいボーナスX3">おてつだいボーナスX3</option>
+            <option value="おてつだいボーナスX4">おてつだいボーナスX4</option>
+            <option value="おてつだいボーナスX5">おてつだいボーナスX5</option>
+          </select>
+        </label>
+        <label>カビゴンの好物: 
+          <select id="favoriteSelct1" >
+            <option value="未入力">未入力</option>
+            <option value="好きなきのみ">好きなきのみ</option>
+          </select>
+        </label>
+        <label>げんき: 
+          <select id="hitpointSelect1" >
+            <option value="0%">0%</option>
+            <option value="1%~40%">1%~40%</option>
+            <option value="40%~60%">41%~60%</option>
+            <option value="60%~80%">61%~80%</option>
+            <option value="81%~150%">81%~150%</option>
+          </select>
+        </label>
+
+        <button onclick="calculate1h()">1時間計算</button>
+        <button onclick="calculate15h()">15時間計算</button>
+        <button onclick="calculate24h()">1日あたり計算</button>
+        <div id="results">
+          <label id="helpCountLabel">お手伝い回数: -</label><br>
+          <label id="berryEnergyResult">きのみエナジー: -</label><br>
+          <label id="ingredientCountResult">食材数: -</label><br>
+          <label id="ingredientEnergyResult">食材エナジー: -</label><br>
+          <label id="skillCountResult">スキル回数: -</label><br>
+          <label id="skillEffectResult">スキル効果: -</label><br>
+        </div>
+        <button onclick="Graph()">グラフを表示</button>
+        <canvas id="energyChart" width="400" height="400"></canvas>
+      </div>
+  </div>
+</div>
+
+<script src="scripts.js"></script>
+<!-- フッター追加 -->
+<footer>
+  <a href="#" onclick="scrollToTop()">エナジー計算機</a>
+</footer>
+
+<script src="scripts.js"></script>
+<script src="Data.js"></script>
+<script src="pokemondata.js"></script>
+<script src="helpspeed.js"></script>
+<script src="possessions.js"></script>
+<script src="mainskill.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  // JavaScriptでページのトップにスクロールする関数
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+</body>
+</html>
